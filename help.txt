@@ -1,0 +1,24 @@
+sudo raspi-config
+
+#Transferring files from local to Beepy
+1. On Windows machine, cd to the folder with the file (ie: cd C:\Users\spenc\Downloads)
+2. scp tmux_wifi_status.sh spenc@sdcbeepy:/home/spenc/
+
+#Network Information
+wavemon
+ifconfig
+
+#Adding an Alias
+alias weather='curl wttr.in/San+Angelo'
+alias ll='ls -a1'
+
+#Search for WiFi Networks
+sudo iwlist wlan0 scan | grep -i ssid
+wpa_passphrase your-ESSID your-wifi-passphrase | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+
+#Alias Refresh
+source ~/.bashrc
+
+#File Path
+mkdir = new folder
+rm = remove file
